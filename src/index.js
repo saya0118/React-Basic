@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './styles/index.scss'
+import Tokyo, { CoffeeBar, CoffeeBar2, CoffeeBar3 } from './App';
+import { EdButton } from './components/Button';
+import Todo from './Todo';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CoffeeBar/>
+    <EdButton/>
+    <Todo/>
   </React.StrictMode>,
   document.getElementById('root')
 );
