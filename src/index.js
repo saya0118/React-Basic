@@ -9,7 +9,7 @@ import Todo from './Todo';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CoffeeBar/>
+    {/* <CoffeeBar/> */}
     <EdButton/>
     <Todo/>
   </React.StrictMode>,

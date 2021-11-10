@@ -14,12 +14,16 @@ const Todo = () => {
         setSearchValue("");
     }
 
-    const onHandleDelete = () => {
+    const onHandleDelete = index => {
         // delete
+        const newToDos = [...todos]
+        newToDos.splice(index,1)
+        setToDos(newToDos)
     }
 
     const onHandleEdit = () => {
         // edit
+        
     }
 
     return (
@@ -28,7 +32,8 @@ const Todo = () => {
             <input value={searchValue} onChange={onChange}/>
             <button onClick={onHandleAdd}>Add</button>
             {
-                todos.map(todo => <li>{todo}</li>)
+                todos.map(todo => <li>{todo}<button onClick={onHandleDelete}>Delete</button>
+                    <button onClick={onHandleEdit}>Edit</button></li>)
             }
         </div>
     )
